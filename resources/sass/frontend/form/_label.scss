@@ -1,0 +1,23 @@
+/**
+ * Forms - global definition
+ * -----------------------------------------------------------------------------
+ */
+
+label {
+    display: inline-block;
+    line-height: 1 !important;
+    padding-left: 5px;
+
+    &.is-title {
+        display: block;
+        @include font-chromo-semi();
+        margin-bottom: 12px;
+        padding: 0;
+        text-transform: uppercase;
+    }
+}
+
+input[type="radio"]:checked + .form-control {
+    background-color: $color-black;
+    color: $color-white;
+}

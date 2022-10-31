@@ -1,0 +1,44 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: component/visual
+ * -----------------------------------------------------------------------------
+ *
+ */
+
+figure.visual {
+  display: block;
+  height: auto;
+  max-height: 90vh;
+  width: 100%;
+
+  img {
+    @extend %is-contain;
+  }
+}
+
+@include bp-xxs() {
+  figure.visual-bg {
+    @include background-default();
+    background-image: url('/assets/media/visual-chamerstrasse-zug.jpg');
+    background-repeat: no-repeat;
+    position: relative; 
+    padding-bottom: 56.25%;
+    height: 0; 
+    overflow: hidden; 
+    width: 100%;
+    height: auto;
+  }
+}
+
+@include bp-xs() {
+  figure.visual-bg {
+    @include background-default();
+    background-image: url('/assets/media/visual-chamerstrasse-zug.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 75vh;
+    width: 100%;
+  }
+}
+

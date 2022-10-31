@@ -1,0 +1,15 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: components/buttons/selection
+ * -----------------------------------------------------------------------------
+ */
+
+.btn-selection {
+  display: inline-block;
+  @include font-size($fs-sm);
+  margin-top: 10px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

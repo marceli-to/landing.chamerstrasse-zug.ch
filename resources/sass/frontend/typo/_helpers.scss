@@ -1,0 +1,41 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: components/typo/helpers
+ * -----------------------------------------------------------------------------
+ *
+ * Helper classes for typography
+ *
+ */
+
+.uc { text-transform: uppercase;}
+
+.lc { text-transform: lowercase; }
+
+.cap { text-transform: capitalize; }
+
+.nobr { white-space: nowrap; }
+
+
+/**
+ * Typography - Font size helpers
+ * -----------------------------------------------------------------------------
+ */
+
+
+
+/**
+ * Typography - Generic elements
+ * -----------------------------------------------------------------------------
+ */
+
+strong, b {
+	@include font-rubik-bold();
+}
+
+p {
+	@include responsive-prop('margin-bottom', $space-sm);
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}

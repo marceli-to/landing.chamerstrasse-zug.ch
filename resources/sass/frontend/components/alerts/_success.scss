@@ -1,0 +1,21 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: component/alerts/success
+ * -----------------------------------------------------------------------------
+ */
+
+.alert {
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: auto;
+
+  > div {
+    background-color: $color-primary;
+    color: $color-white;
+    @include font-rubik-bold();
+    @include font-size($fs-sm);
+    padding: 15px;
+    text-align: center;
+  }
+}

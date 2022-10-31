@@ -1,0 +1,129 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: layout/section
+ * -----------------------------------------------------------------------------
+ */
+
+section {
+
+  .page-inner {
+    @extend %page-block;
+  }
+
+  &.page-section {
+    @include responsive-prop('padding-top', $space-md);
+    
+    article {
+      @include responsive-prop('padding-bottom', $space-lg);
+    }
+    
+    p {
+      max-width: $element-max-width;
+    }
+
+    ul, li {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      @include responsive-prop('margin-left', $space-sm);
+      @include responsive-prop('margin-bottom', $space-md);
+    }
+
+    li {
+      display: list-item;
+      list-style-type: square;
+      margin-bottom: 3px;
+    }
+
+    .visual {
+      margin-bottom: 25px;
+      
+      &:last-child {
+        margin-bottom: 0 !important;
+      }
+
+      @include bp-md() {
+        margin-bottom: 40px;
+      }
+
+      img {
+        @extend %is-responsive;
+
+      }
+
+      &.is-gallery {
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+  &.is-dark {
+    background-color: $color-primary;
+    color: $color-white;
+
+    h1 {
+      color: $color-secondary;
+    }
+
+    a {
+      color: $color-white;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    p {
+      max-width: 760px;
+    }
+  }
+
+  &.is-light {
+    background-color: $color-secondary;
+    color: $color-white;
+
+    h1, p, label {
+      color: $color-primary;
+    }
+
+    a {
+      color: $color-primary;
+      text-decoration: none;
+      transition: color .12s ease-out;
+
+      &:hover {
+        color: $color-white;
+      }
+    }
+  }
+
+
+  &.is-map {
+    padding: 0 !important;
+    height: 240px;
+
+    @include bp-sm() {
+      height: 360px;
+    }
+
+    @include bp-md() {
+      height: 540px;
+    }
+
+    .marker {
+      background-image: url($url-images + 'marker.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      cursor: pointer;
+      height: 50px;
+      width: 40px;
+
+      @include bp-md() {
+        height: 60px;
+        width: 50px;
+      }
+    }
+  }
+}

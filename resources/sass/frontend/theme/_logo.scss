@@ -1,0 +1,48 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: theme/brand
+ * -----------------------------------------------------------------------------
+ *
+ */
+
+// .logo {
+//   display: block;
+//   height: auto;
+//   position: relative;
+//   top: -4px;
+//   width: 225px;
+
+//   @include bp-xs() {
+//     width: 180px;
+//   }
+  
+//   @include bp-sm() {
+//     width: 240px;
+//   }
+  
+//   @include bp-md() {
+//     width: 200px;
+//   }
+
+//   @include bp-lg() {
+//     width: 400px;
+//   }
+// }
+
+.is-landing {
+  .logo {
+    display: block;
+    height: auto;
+    position: relative;
+    width: 100px;
+  
+    @include bp-xs() {
+      width: 100px;
+    }
+    
+    @include bp-md() {
+      width: 180px;
+    }
+  
+  }
+}

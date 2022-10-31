@@ -1,0 +1,27 @@
+<?php
+
+return [
+
+  /*
+  |--------------------------------------------------------------------------
+  | Seo title (General)
+  |--------------------------------------------------------------------------
+  |
+  | Used for SEO (Pagetitle, Open Graph Title etc.)
+  |
+  */
+
+  'title' => 'Wohnen in unmittelbarer Lage zum Zugersee - Austrasse Zürich',
+
+  /*
+  |--------------------------------------------------------------------------
+  | Seo description (General)
+  |--------------------------------------------------------------------------
+  |
+  | Used for SEO (Meta description, Open Graph Description)
+  |
+  */
+
+  'description' => '',   
+
+];

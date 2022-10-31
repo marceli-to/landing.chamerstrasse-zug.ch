@@ -1,0 +1,26 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: layout/base
+ * -----------------------------------------------------------------------------
+ */
+
+
+html {
+	overflow-y: scroll;
+}
+
+html,
+body {
+	min-height: 100%;
+}
+
+body {
+	color: $color-black;
+	@include font-rubik-light();
+	@include font-smoothing();
+	@include font-size($fs-md);
+	text-rendering: optimizeLegibility;
+}
+
+// Scrollbars
+@include scrollbar(8px, #dddddd, #ffffff);

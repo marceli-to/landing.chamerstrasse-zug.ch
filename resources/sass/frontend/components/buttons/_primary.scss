@@ -1,0 +1,29 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: components/buttons/primary
+ * -----------------------------------------------------------------------------
+ */
+
+ .btn-primary {
+  background-color: $color--red;
+  border-radius: 2px;
+  color: $color-white !important;
+  display: block;
+  @include font-chromo-semi();
+  padding: 12px 10px 10px 10px;
+  line-height: 1 !important;
+  min-height: 38px;
+  margin-top: -15px;
+
+  @include bp-xs() {
+    margin-top: 9px;
+  }
+
+  @include bp-lg() {
+    margin-top: 8px;
+  }
+
+  &:hover {
+    background-color: $color--dark-blue;
+  }
+}

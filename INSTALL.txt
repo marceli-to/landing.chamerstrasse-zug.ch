@@ -1,0 +1,21 @@
+Add admin user:
+
+1) php artisan tinker
+2) DB::table('users')->insert(['name'=>'marcel','email'=>'m@marceli.to','password'=>Hash::make('7aq31rr')])
+3) DB::table('users')->insert(['name'=>'dennis','email'=>'dennis@stoz.ch','password'=>Hash::make('vmr6wdD&IGnE-+&G%gdr')])
+4) DB::table('users')->insert(['name'=>'dennis','email'=>'chantal.bieri@apleona.com','password'=>Hash::make('hhIsXmul_fwELcc3cT5N')])
+
+php composer.phar install --optimize-autoloader --no-dev
+
+/opt/plesk/php/7.4/bin/php
+
+ssh:
+
+ssh billrothminerva@chamerstrasse-zug.ch -p2121
+9ijgW89_3&R4lz2y
+
+ssh austrasse-zueric@chamerstrasse-zug.ch -p 2121
+zP*4632dn
+
+ssh chamerstrasse-zu@chamerstrasse-zug.ch -p 2121
+4^766wcbZqX$7j12r1

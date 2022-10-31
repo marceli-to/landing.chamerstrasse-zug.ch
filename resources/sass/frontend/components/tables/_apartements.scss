@@ -1,0 +1,92 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: components/tables/global
+ * -----------------------------------------------------------------------------
+ */
+
+.apartements-title {
+  background-color: $color--red;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  color: $color-white;
+  @include font-chromo-light();
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+table.apartements {
+  width: 100%;
+
+  th {
+    @include font-chromo-semi();
+  }
+
+  th, td {
+    @include font-size($fs-sm);
+    text-align: left;
+    padding: 5px 10px 5px 5px;
+    vertical-align: top;
+
+    &.align-right {
+      text-align: right;
+    }
+
+    &.is-last {
+      text-align: right;
+      padding-right: 0 !important;
+    }
+
+    &.hide-mobile {
+      display: none;
+      @include bp-sm() {
+        display: table-cell;
+      }
+    }
+  }
+
+  tr {
+    border-bottom: 1px solid $color--red;
+    &.is-active-row {
+      background-color: $color--red;
+    }
+
+    &:hover {
+      background-color: $color--red;
+      cursor: pointer;
+    }
+  }
+
+  thead tr:hover {
+    background-color: transparent !important;
+    cursor: default;
+  }
+
+  tbody td {
+    vertical-align: middle;
+  }
+
+  td.apartement-download {
+    text-align: right;
+
+    svg {
+      display: inline-block;
+      height: auto;
+      width: 12px;
+    }
+  }
+}
+
+.apartements-selection {
+  margin-top: 30px;
+  width: calc(100% + 20px);
+
+  th:first-of-type,
+  td:first-of-type {
+    padding-left: 0;
+  }
+
+  h2 {
+    border-bottom: 1px solid $color--red;
+    padding: 0 0 5px 0;
+  }
+}

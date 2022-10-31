@@ -1,0 +1,30 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: layout/header
+ * -----------------------------------------------------------------------------
+ */
+
+header.site-header {
+  background-color: $color-white;
+  @include responsive-prop('height', $header-heights);
+
+  > div {
+    @extend %page-block;
+    height: inherit;
+    align-items: flex-end;
+    display: flex;
+    justify-content: space-between;
+    height: inherit;
+    padding-bottom: 20px;
+  }
+
+  &.is-landing {
+    > div {
+      align-items: center;
+      @include responsive-prop('height', $header-heights);
+      justify-content: flex-end;
+      padding-bottom: 0;
+    }
+  }
+}
+

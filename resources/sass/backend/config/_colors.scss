@@ -1,0 +1,30 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: config/colors
+ * -----------------------------------------------------------------------------
+ */
+
+$color--black: #000000;
+$color--white: #ffffff;
+
+$color--dark:  #002245;
+$color--light: #f9f9f9;
+
+// Grey tones
+$color--grey:        #999999;
+$color--light-grey:  #eeeeee;
+$color--medium-grey: #666666;
+$color--dark-grey:   #333333;
+
+// Application colors
+$color--red:       #8cc9a3;
+$color--light-blue: #dfe6e3;
+$color--red:         #d9534f;
+$color--blue:        #5bc0de;
+$color--yellow:      #f0ad4e;
+
+// Notification colors
+$color--success:   #5cb85c !default;
+$color--info:      #5bc0de !default;
+$color--warning:   #f0ad4e !default;
+$color--danger:    #d9534f !default;

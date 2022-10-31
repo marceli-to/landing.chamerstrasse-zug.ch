@@ -1,0 +1,126 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: form/forms
+ * -----------------------------------------------------------------------------
+ *
+ */
+
+form.contact-form {
+
+  p {
+    @include font-size($fs-sm);
+    margin-bottom: 5px !important;
+  }
+
+  label {
+    color: $color-white;
+    @include font-size($fs-sm);
+  }
+
+  input[type=checkbox] {
+    display: inline-block;
+    position:relative;
+    top: -1px;
+
+    @include bp-md() {
+      top: -2px;
+    }
+  }
+
+  .form-controls {
+    @include responsive-prop('margin-bottom', $space-sm);
+  }
+
+  .form-input {
+    max-width: 900px;
+    @include bp-lg() {
+      max-width: 1100px;
+    }
+
+    .span {
+      position: relative;
+    }
+  }
+}
+
+.cssgrid {
+
+  .form-controls__grid {
+    display: grid;
+    margin-bottom: 15px;
+    margin-top: 10px;
+
+    .form-control {
+      margin-bottom: 5px;
+    }
+
+    @include bp-sm() {
+      grid-template-columns: repeat(3, 160px);
+      grid-column-gap: 25px;
+      grid-row-gap: 0;
+    }
+
+    @include bp-md() {
+      grid-template-columns: repeat(3, 195px);
+    }
+  }
+
+  .form-input__grid {
+    display: grid;
+    margin-bottom: 20px;
+    max-width: 700px;
+    
+    .span {
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.no-cssgrid {
+
+  .form-controls__grid {
+    @extend %clearfix;
+    .span {
+
+      @include bp-sm() {
+        float: left;
+        width: 160px;
+      }
+
+      @include bp-md() {
+        width: 180px;
+      }
+    }
+  }
+
+  // .form-input__grid {
+  //   @extend %clearfix;
+
+  //   .span {
+  //     @include bp-sm() {
+  //       float: left;
+  //       margin-bottom: 20px;
+  //       margin-right: 20px;
+  //       width: calc(50% - 10px);
+
+  //       &:nth-child(2n+2) {
+  //         margin-right: 0;
+  //       }
+  //     }
+  //   }
+  // }
+}
+
+form.apartment-form {
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  @include bp-sm() {
+    margin-top: 50px;
+    margin-bottom: 60px;
+  }
+}
