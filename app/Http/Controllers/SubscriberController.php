@@ -41,25 +41,6 @@ class SubscriberController extends Controller
     $subscriber->interest   = $request->interest ? implode(', ' , $request->interest) : NULL;
     $subscriber->save();
 
-    // mail data
-    // $mail_data = [
-    //   'refProperty' => '2100',
-    //   'refHouse' => '99',
-    //   'refObject' => '9999',
-    //   'inquiryFirstname' => $subscriber->firstname,
-    //   'inquiryName' => $subscriber->name,
-    //   'inquiryStreet' => $subscriber->street,
-    //   'inquiryZip' => $subscriber->zip,
-    //   'inquiryCity' => $subscriber->city,
-    //   'inquiryEmail' => $subscriber->email,
-    //   'inquiryInterest' => $subscriber->interest,
-    //   'inquiryPhone' => $subscriber->phone,
-    //   'remarks' => str_replace("\n", "\r\n", str_replace("\r", '', $subscriber->remarks)),
-    // ];
-
-    // send mail to owner
-    // Mail::to(env('MAIL_RECIPIENT'))->send(new ConfirmationOwner(json_encode($mail_data)));
-
     // send mail to client
     try {
       Mail::to($subscriber->email)->send(new ConfirmationSubscriber($subscriber));
