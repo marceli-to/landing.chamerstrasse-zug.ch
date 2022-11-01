@@ -11,7 +11,7 @@ return [
   |
   */
 
-  'title' => 'Wohnen in unmittelbarer Lage zum Zugersee - Austrasse Zürich',
+  'title' => 'Wohnen in unmittelbarer Nähe zum Zugersee - Austrasse Zürich',
 
   /*
   |--------------------------------------------------------------------------

@@ -12,7 +12,7 @@
 <section class="page-section is-dark">
   <div class="page-inner">
     <article>
-      <h1>Wohnen in unmittelbarer Lage zum Zugersee</h1>
+      <h1>Wohnen in unmittelbarer Nähe zum Zugersee</h1>
       <p><strong>Erstvermietung</strong><br>An der Chamerstrasse 68 a/b & 70 a/b in 6300 Zug entstehen per Mitte 2024 neue, moderne 2.5- bis 4.5-Zimmerwohnungen. Die Wohnungen befinden sich in Gehdistanz zum Zugersee.</p>
       <p>Gerne senden wir Ihnen weitere Informationen, sobald die Vermietung startet. Bitte füllen Sie bei Interesse das Kontaktformular aus.</p>
     </article>
