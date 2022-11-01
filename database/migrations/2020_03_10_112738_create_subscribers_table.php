@@ -19,7 +19,7 @@ class CreateSubscribersTable extends Migration
             $table->string('name', 100);
             $table->string('email', 100);
             $table->string('phone', 100)->nullable();
-            $table->string('interest', 100);
+            $table->string('interest', 100)->nullable();
             $table->timestamps();
         });
     }
