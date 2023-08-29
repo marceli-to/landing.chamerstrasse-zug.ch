@@ -29,6 +29,7 @@ class SubscriberController extends Controller
       'name'      => 'required',
       'phone'      => 'required',
       'email'     => 'required|email',
+      'privacy'   => 'required',
       //'interest'  => 'required|min:1'
     ]);
 

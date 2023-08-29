@@ -84,6 +84,20 @@
             @endif
             <input type="text" name="phone" placeholder="Telefon *" data-rules="required">
           </div>
+
+          <div class="span span--2 relative">
+            @if ($errors->has('privacy'))
+              <div class="error-message mb-2x">{{ $errors->first('privacy') }}</div>
+            @else
+              <div class="error-message mb-2x js-error-privacy" style="display:none; margin-bottom: 5px">Bitte Datenschutzerklärung akzeptieren</div>
+            @endif
+            <div class="form-control">
+              <input type="checkbox" name="privacy" value="1" id="privacy" data-rules="required|check[privacy]">
+              <label for="privacy">
+                <span class="text">Ich habe die <a href="{{ route('page_privacy') }}" target="_blank">Datenschutzerklärung</a> gelesen und akzeptiere diese.</span>
+              </label>
+            </div>
+          </div>
           <div class="span">
             <div class="form-button">
               <input type="submit" value="Absenden" class="js-btn-submit">

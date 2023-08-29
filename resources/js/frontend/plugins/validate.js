@@ -20,7 +20,6 @@ var Validate = (function() {
   var classes = {
     hasError: 'has-error',
     loading:  'is-loading',	
-
   };
 
   // regex
@@ -85,7 +84,7 @@ var Validate = (function() {
       var rules  = $(elem).data('rules').split('|');
             
       // loop over all rules for that element
-      if (rules.length > 0) {
+      if (rules.length > 0) {
         for (var z = 0; z < rules.length; z++) {
           
           // check for rules with parameters (i.e. min_length[2])
@@ -101,9 +100,13 @@ var Validate = (function() {
             isValid = false;
             $(elem).addClass(classes.hasError);
             $(elem).prev('.error-message').show();
-            
             if ($(elem).is(':checkbox')) {
-              $(elem).parents('.form-controls').find('.error-message').show();
+              if ($(elem).attr('name') == 'privacy') {
+                $('.js-error-privacy').show(); 
+              }
+              else {
+                $('.js-error-interest').show();
+              }
             }
           }
         }
@@ -195,7 +198,13 @@ var Validate = (function() {
     }
     return false;
   };
-
+  var _check = function(el,field) {
+    var fieldname = field;
+    if ($('[name="'+fieldname+'"]').is(':checked')) {
+      return true;
+    }
+    return false;
+  };
   var _at_least_one = function(el,field) {
     var fieldname = field + '[]';
     if ($('[name="'+fieldname+'"]').val() != undefined && $('[name="'+fieldname+'"]').val() != '') {
@@ -216,6 +225,7 @@ var Validate = (function() {
     valid_url: _valid_url,
     is_checked: _is_checked,
     check_one: _check_one,
+    check: _check,
     min_length: _min_length,
     max_length: _max_length,
     matches: _matches,

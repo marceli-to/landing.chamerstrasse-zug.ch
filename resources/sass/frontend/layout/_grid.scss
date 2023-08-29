@@ -39,5 +39,11 @@
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 25px;
     }
+
+    .span--2 {
+      @include bp-xs() {
+        grid-column: 1 / span 2;
+      }
+    }
   }
 }
